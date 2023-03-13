@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="paragraf">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+      consequuntur molestiae! Accusantium, obcaecati quo maxime quaerat neque,
+      unde ipsam voluptas beatae nihil et asperiores. Laudantium maiores
+      aspernatur autem laborum
+      <br />
+      <br />
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+      consequuntur molestiae! Accusantium, obcaecati quo maxime quaerat neque,
+      unde ipsam voluptas beatae nihil et asperiores. Laudantium maiores
+      aspernatur autem laborum
+      <br />
+      <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+      consequuntur molestiae! Accusantium, obcaecati quo maxime quaerat neque,
+      unde ipsam voluptas beatae nihil et asperiores. Laudantium maiores
+      aspernatur autem laborum
+    </p>
+
+    <script>
+      const paragraf = document.getElementById("paragraf");
+      let counter = 0;
+
+      const colors = ["red", "yellow", "green"];
+
+      function changeColor() {
+        if (counter >= colors.length) {
+          counter = 0;
+        }
+        paragraf.style.color = colors[counter];
+        counter++;
+      }
+
+      let interval = setInterval(changeColor, 1000);
+
+      setTimeout(() => {
+        clearInterval(interval);
+      }, 10000);
+    </script>
+  </body>
+</html>
